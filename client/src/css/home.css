@@ -1,0 +1,137 @@
+#main2{
+
+  height:100vh;
+  background-color:aqua;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+
+#head2 {
+width:100%;
+background-color: blue;
+}
+
+
+.header {
+  text-align: center;
+  width: 100%;
+  background-image: linear-gradient( 129.1deg,  rgba(243,199,83,1) 26.8%, rgba(18,235,207,1) 114.1% );
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-weight: 200;
+  background-color:yellowgreen;
+  margin-bottom:50px;
+height:60px;
+}
+
+
+
+
+
+.search{
+  height:20px;
+  width:10%;
+  margin:0px;
+
+}
+.searchitem{
+  display:flex;
+  flex-direction: column;
+}
+
+
+
+.main{
+    border-collapse: collapse;
+          
+}
+
+tr{
+ 
+    border:30px solid white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  
+}
+
+th{
+  background: #FFFFFF;;
+
+
+    border-collapse: collapse;
+}
+
+td{
+  background: #FFFFFF;;
+
+    margin:10px; 
+}
+
+
+ 
+table, th, td {
+
+  padding:10px;
+}
+
+
+
+.wasnt{
+  padding:20px 40px 20px 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border:0.5px solid rgb(92, 185, 228);
+margin-left:10px;
+border-radius: 35px;
+
+background-image: linear-gradient( 64.3deg,  rgba(254,122,152,0.81) 17.7%, rgba(255,206,134,1) 64.7%, rgba(172,253,163,0.64) 112.1% );
+}
+
+.wasnt:hover{
+
+  background-image: linear-gradient( 102.4deg,  rgba(253,189,85,1) 7.8%, rgba(249,131,255,1) 100.3% );
+
+  border:0.5px solid rgb(49, 133, 108);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#secondsection{
+  display: grid;
+  grid-template-rows: 10vh auto;
+ 
+}
+
+
+#secondsectionfirstpart{
+  margin:5px;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #ffffff;
+  width:80%;
+}
+
+#displayitem{
+  margin-left:200px;
+}
+
+
+.logout{
+  background-image: linear-gradient( 359.8deg,  rgba(252,255,222,1) 2.2%, rgba(182,241,171,1) 99.3% );
+  color:#008000;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+border:none;
+height:100%;
+width:100px;
+float:right;
+border-radius: 5px;
+}
+
+.logout:hover{
+  background-image: linear-gradient( 90.4deg,  rgba(255,220,163,1) 21.2%, rgba(129,255,239,1) 90.7% );
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  cursor:pointer;
+  color:red;
+  border-radius: 5px;
+}
+
