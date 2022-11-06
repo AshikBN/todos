@@ -3,30 +3,28 @@ import Sidebar from './sidebar';
 import { useEffect, useState} from 'react';
 import {  useNavigate } from "react-router-dom";
 
+
 const Home= () => {
   const [watch, setWatch] = useState(0);
   const [timerID, settimerID] = useState(null);
-  const Navigate=useNavigate()
+  const navigate=useNavigate()
   const [users,Setusers]=useState([]);
  const [status,setstatus]=useState("pending")
  const [time,settime]=useState("")
 
-  const gottonext=()=>{
-    Navigate("/form")
-        }
-
+ 
 
     const handleLogout = () => {
     
       localStorage.clear();
-      Navigate("/");
+      navigate("/");
   };
 
   const Start = () => {
       setstatus("ongoing")
     if (!timerID) {
       const id = setInterval(() => {
-        if (watch == 10) {
+        if (watch === 10) {
           clearInterval(id);
         } else {
           setWatch((watch) => watch + 1);
@@ -57,7 +55,7 @@ const Home= () => {
 
 //fetch part
 const getUsers =async() => {
-    const response =  await fetch('http://localhost:8000/data' ,  {
+    const response =  await fetch('/data' ,  {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -79,17 +77,19 @@ const getUsers =async() => {
   return (
 <>
 <header className="header">
-<div className='headside'><Sidebar/></div>
+{/* <div className='headside'><Sidebar/></div> */}
 
-<button className='logout' onClick={handleLogout}>
+<button style={{float: "right",
+    height: "50px",
+    width: "100px",
+    backgroundColor: "red",
+    borderRadius: "15px"}} className='logout' onClick={handleLogout}>
                    Logout
                </button>
 </header>
 <div id="secondsection">
 <div id="secondsectionfirstpart"> 
-<button className='wasnt' onClick={gottonext}>
-                   Add New
-               </button>
+
 
 </div>
 <div id="displayitem">
@@ -117,6 +117,7 @@ const getUsers =async() => {
             <td> <button onClick={Reset}>End</button></td>
                    </tr> 
         )
+            
 
     })
 }
@@ -124,6 +125,7 @@ const getUsers =async() => {
 </tbody>
         </table>
     </div>
+    <button className='add-new' onClick={()=>{navigate("/form")}} >Add new</button>
 
 </div>
 
